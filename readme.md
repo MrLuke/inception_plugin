@@ -14,6 +14,8 @@ A plugin that plays the Inception "BRRRRRRRAAAAAWWWWRWRRRMRMRMMRMRMMMMM!!!" when
 3. Enter classes into field, you can do multiple classes. E.g ".button, .example" 
 4. Enjoy.
 
+If you have changed the plugin file name from Inception please go into inception.php & change the plugin_url(). to the correct file path otherwise this won't work.
+
 == Changelog ==
 
 = 1.0 =

@@ -61,13 +61,13 @@ function inception_options(){
 add_action('admin_init', 'inception_admin_init');
 function inception_admin_init(){
 	register_setting('inception_options', 'inception_options', '');
-	add_settings_section('inception_main', 'Inception Settings', '', 'inception');
+	add_settings_section('inception_main', 'Inception Settings', 'inception_section_text', 'inception');
 	add_settings_field('inception_text_string', 'Enter Class/ID:', 'inception_setting_input', 'inception', 'inception_main');
 }
 
-// function inception_section_text(){
-// 	echo '<p>Enter your settings here.</p>';
-// }
+function inception_section_text(){
+	echo '<p>Enter your settings here.</p>';
+}
 
 function inception_setting_input(){
 	$option      = get_option('inception_options');
@@ -78,9 +78,9 @@ function inception_setting_input(){
 function inception_head(){
 	if (!is_admin()){
 		echo '<script>';
-		echo 'var plugin_url = "'.plugins_url().'/jigoshop_inception/";';
+		echo 'var plugin_url = "'.plugins_url().'/inception/";';
 		echo '</script>';
-		wp_enqueue_script( 'inception', $src = plugins_url().'/jigoshop_inception/script.js', $deps = 'jquery', $in_footer = false );
+		wp_enqueue_script( 'inception', $src = plugins_url().'/inception/script.js', $deps = 'jquery', $in_footer = false );
 	}
 }
 add_action('wp_head', 'inception_head');

@@ -2,11 +2,11 @@
 
 /*
 Plugin Name: Inception Button
-Plugin URI: I don't have one :(
+Plugin URI: lukereid.me
 Description: Click it and find out.
 Version: 1.0
 Author: Luke Reid
-Author URI: Again I don't have one :( 
+Author URI: lukereid.me
 License: GPLv2 or later
 */
 
